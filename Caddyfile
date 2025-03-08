@@ -1,0 +1,40 @@
+localhost
+
+root ./
+
+route {
+	# Add trailing slash for directory requests
+	# This redirection is automatically disabled if "{http.request.uri.path}/index.lua"
+	# doesn't appear in the try_files list
+	@canonicalPath {
+		file {path}/index.lua
+		file {path}/index.lhp
+		file {path}/index.html
+		not path */
+	}
+	redir @canonicalPath {http.request.orig_uri.path}/ 308
+
+	# If the requested file does not exist, try index files and assume index.lua always exists
+	@indexFiles file {
+		try_files {path} {path}/index.lua {path}/index.lhp {path}/index.html index.lhp index.lua
+		#try_policy first_exist_fallback
+		split_path .lua
+	}
+	rewrite @indexFiles {file_match.relative}
+
+	#Proxy Lua files to the FastCGI responder
+	@luaFiles {
+		not path /static/*
+		path *.lua *.lhp
+	}
+
+	reverse_proxy @luaFiles :7777 {
+		transport fastcgi {
+			split .lua .lhp
+		}
+	}
+}
+
+route /static/* {
+	file_server /static/*
+}

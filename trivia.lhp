@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang=ru>
+    <head>
+        <meta charset=utf-8>
+        <script src="fengari-web.js" type="text/javascript"></script>
+        <title>Trivia</title>
+    </head>
+    <body>
+        <p>I'm the content</p>
+    </body>
+</html>
