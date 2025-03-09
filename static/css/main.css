@@ -19,6 +19,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     min-height: 100vh;
+    paint-order: stroke fill;
 }
 
 .content {
@@ -29,7 +30,6 @@ body {
 
 .header {
     -webkit-text-stroke: 10px white;
-    paint-order: stroke fill;
     font-size: 4rem;
     margin: 0;
     width: max-content;
@@ -37,7 +37,6 @@ body {
 .subheader {
     color: #FF00A1;
     -webkit-text-stroke: 8px black;
-    paint-order: stroke fill;
     font-size: 36px;
     margin-top: 0;
     margin-bottom: 0;
@@ -75,4 +74,13 @@ body {
     font-variation-settings:
         "wdth" 100;
     font-size: 14px;
+}
+
+.rant-body {
+    font-size: 36px;
+    -webkit-text-stroke: 8px white;
+}
+
+.rant-list {
+    list-style-type: decimal;
 }

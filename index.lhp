@@ -17,6 +17,17 @@ startGenTime = socket.gettime();
                 <h1 class=header>2025<br> ЭТО ОЧЕРЕДНОЙ ГОД ЛУА ПОБЕДЫ</h1>
                 <h2 class=subheader>и так уже <span id="year"><?lua print ((socket.gettime()-773625600)/60/60/24/365)?></span> лет</h1>
             </div>
+            <div class="rant-body">
+                <div class="rant">
+                    <div class="python">ПИТОН БЫЛ ОШИБКОЙ</div>
+                    <ul class="rant-list">
+                        <?lua
+                        for k, v in ipairs(require"luafacts") do
+                            print ("<li class=rant-item>"..v.."</li>")
+                        end
+                        ?>
+                </div>
+            </div>
         </div>
         <div class ="subtext-cont">
             <div class="subtext">
