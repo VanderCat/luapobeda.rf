@@ -26,6 +26,7 @@ body {
     padding-top: 16px;
     padding-left: 32px;
     padding-right: 32px;
+    max-width: 1228px;
 }
 
 .header {
@@ -79,8 +80,27 @@ body {
 .rant-body {
     font-size: 36px;
     -webkit-text-stroke: 8px white;
+    display: flex;
+    gap: 4rem;
 }
 
 .rant-list {
     list-style-type: decimal;
+}
+
+.python {
+    background-image: url(/static/img/nopython.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 216px;
+    animation: colorRotate 6s linear 0s infinite;
+}
+
+.luatan {
+    max-width: 390px;
+}
+
+.luatan img {
+    width: 100%;
 }

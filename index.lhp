@@ -8,24 +8,30 @@ startGenTime = socket.gettime();
         <meta charset=utf-8>
         <script src="/static/js/fengari-web.js" type="text/javascript"></script>
         <link href="/static/css/main.css" rel="stylesheet">
+        <link href="/rainbow.css.lhp" rel="stylesheet">
         <script src="/static/lua/updateyear.lua" type="application/lua" async></script>
         <title>ЛУА ПОБЕДА</title>
     </head>
     <body>
         <div class=content>
             <div class="header-cont">
-                <h1 class=header>2025<br> ЭТО ОЧЕРЕДНОЙ ГОД ЛУА ПОБЕДЫ</h1>
+                <h1 class=header>2025<br> ЭТО ОЧЕРЕДНОЙ ГОД LUA ПОБЕДЫ</h1>
                 <h2 class=subheader>и так уже <span id="year"><?lua print ((socket.gettime()-773625600)/60/60/24/365)?></span> лет</h1>
             </div>
             <div class="rant-body">
                 <div class="rant">
-                    <div class="python">ПИТОН БЫЛ ОШИБКОЙ</div>
+                    <div class="python">
+                        <span>ПИТОН БЫЛ ОШИБКОЙ</span>
+                    </div>
                     <ul class="rant-list">
                         <?lua
                         for k, v in ipairs(require"luafacts") do
                             print ("<li class=rant-item>"..v.."</li>")
                         end
                         ?>
+                </div>
+                <div class="luatan">
+                    <img src="/static/img/luatan.png"/>
                 </div>
             </div>
         </div>
