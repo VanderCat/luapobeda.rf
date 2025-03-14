@@ -95,6 +95,15 @@ body {
     align-items: center;
     height: 216px;
     animation: colorRotate 6s linear 0s infinite;
+    color: hsl(0deg, 100%, 50%);
+}
+
+.rant-list {
+    text-shadow: 
+        4px 8px 4px rgba(0, 0, 0, 0.75),
+        3px 8px 4px rgba(0, 0, 0, 0.75),
+        2px 8px 4px rgba(0, 0, 0, 0.75),
+        1px 8px 4px rgba(0, 0, 0, 0.75);
 }
 
 .luatan {

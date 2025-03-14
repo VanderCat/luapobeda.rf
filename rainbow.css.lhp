@@ -2,5 +2,5 @@
 setHeader("Content-Type", "text/css")
 ?>*/
 @keyframes colorRotate {
-<?lua for i = 1, 360 do print(""..(i/360*100).."% { color: hsl("..i.."deg, 100%, 50%) }") end ?>
+<?lua for i = 0, 360 do print(""..(i/360*100).."% { color: hsl("..i.."deg, 100%, 50%) }") end ?>
 }
