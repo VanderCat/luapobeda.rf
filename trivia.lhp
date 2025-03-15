@@ -10,7 +10,6 @@
         local i = require "inspect"
         ?>
         <?lua
-        package.loaded["trivia_text"] = nil
         local a = require("trivia_text")
         for header, list in pairs(a) do
             print("<h1>"..header.."</h1>")
