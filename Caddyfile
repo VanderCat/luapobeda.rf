@@ -1,8 +1,7 @@
 localhost
 
-root ./
-
 route {
+	root /opt/luapobeda.rf/
 	# Add trailing slash for directory requests
 	# This redirection is automatically disabled if "{http.request.uri.path}/index.lua"
 	# doesn't appear in the try_files list

@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  luapobeda:
+    build: .
+    volumes:
+      - /opt/luapobeda.rf/:/opt/luapobeda.rf/
+    ports:
+      - 7777:7777
