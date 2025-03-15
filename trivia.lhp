@@ -6,6 +6,20 @@
         <title>Trivia</title>
     </head>
     <body>
-        <p>I'm the content</p>
+        <?lua
+        local i = require "inspect"
+        ?>
+        <?lua
+        package.loaded["trivia_text"] = nil
+        local a = require("trivia_text")
+        for header, list in pairs(a) do
+            print("<h1>"..header.."</h1>")
+            print "<ul>"
+            for key, text in ipairs(list) do
+                print("<li>"..text.."</li>")
+            end
+            print "</ul>"
+        end
+        ?>
     </body>
 </html>

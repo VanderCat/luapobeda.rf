@@ -33,7 +33,7 @@ body {
     -webkit-text-stroke: 10px white;
     font-size: 4rem;
     margin: 0;
-    width: max-content;
+    max-width: max-content;
 }
 .subheader {
     color: #FF00A1;
@@ -41,7 +41,7 @@ body {
     font-size: 36px;
     margin-top: 0;
     margin-bottom: 0;
-    width: max-content;
+    max-width: max-content;
 }
 #year {
     display: inline-block;
@@ -49,7 +49,7 @@ body {
 }
 
 .header-cont {
-    width: max-content;
+    max-width: max-content;
     display: flex;
     flex-direction: column;
     align-items: end;
@@ -75,6 +75,7 @@ body {
     font-variation-settings:
         "wdth" 100;
     font-size: 14px;
+    text-align: center;
 }
 
 .rant-body {
@@ -86,6 +87,7 @@ body {
 
 .rant-list {
     list-style-type: decimal;
+    hyphens: auto;
 }
 
 .python {
@@ -96,6 +98,7 @@ body {
     height: 216px;
     animation: colorRotate 6s linear 0s infinite;
     color: hsl(0deg, 100%, 50%);
+    text-align: center;
 }
 
 .rant-list {
@@ -108,8 +111,37 @@ body {
 
 .luatan {
     max-width: 390px;
+    display: flex;
+    flex-direction: column;
 }
 
-.luatan img {
+.luatan-img {
     width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+    .rant-body {
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+    }
+    .luatan {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .header-cont {
+        text-align: center;
+    }
+}
+
+.visit-counter {
+    object-position: center;
+    object-fit: contain;
+    flex-grow: 0;
+    height: 100px;
 }
